@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    url("./fonts/PlayfairDisplay-Italic.woff2") format("woff2"),
+    url("./fonts/PlayfairDisplay-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src:
+    url("./fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("./fonts/Montserrat-ThinItalic.woff2") format("woff2"),
+    url("./fonts/Montserrat-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("./fonts/Montserrat-Thin.woff2") format("woff2"),
+    url("./fonts/Montserrat-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +47,8 @@ html,
 body {
   height: 100%;
   margin: 0;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 body {
   display: grid;
@@ -60,6 +102,7 @@ nav > button {
 }
 
 #content > h1 {
+  font-family: "Playfair Display";
   font-size: 5rem;
   font-weight: 100px;
 }
@@ -85,8 +128,9 @@ nav > button {
   background-color: rgb(213, 103, 0);
   transition-duration: 1s;
   color: white;
+  font-weight: bold;
   &:hover {
-    background-color: rgb(170, 82, 0); ;
+    background-color: rgb(170, 82, 0);
     cursor: pointer;
   }
 }
