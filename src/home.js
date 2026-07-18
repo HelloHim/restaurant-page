@@ -1,23 +1,28 @@
 import "./styles.css";
 import { createMenuPage } from "./menu.js";
+import { createContactPage } from "./contact.js";
 
+const content = document.getElementById("content");
 const homeBtn = document.getElementById("Home");
 const menuBtn = document.getElementById("Menu");
-const aboutBtn = document.getElementById("About");
+const contactBtn = document.getElementById("Contact");
 
-homeBtn.addEventListener("click", (e) => {
+homeBtn.addEventListener("click", () => {
   content.replaceChildren();
   createHomePage();
 });
 
-menuBtn.addEventListener("click", (e) => {
+menuBtn.addEventListener("click", () => {
   content.replaceChildren();
   createMenuPage();
 });
 
-function createHomePage() {
-  const content = document.getElementById("content");
+contactBtn.addEventListener("click", () => {
+  content.replaceChildren();
+  createContactPage();
+});
 
+function createHomePage() {
   const homePage = document.createElement("div");
   homePage.id = "home-page";
 
@@ -33,9 +38,12 @@ function createHomePage() {
 
   const btn = document.createElement("button");
   btn.textContent = "Menu";
+  btn.addEventListener("click", () => {
+    content.replaceChildren();
+    createMenuPage();
+  });
 
   homePage.append(header, para, btn);
-
   content.append(homePage);
 }
 
