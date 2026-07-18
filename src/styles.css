@@ -90,28 +90,32 @@ nav > button {
 }
 
 #content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 50px;
+}
+
+#content > #home-page {
   display: grid;
+  height: 100%;
   justify-items: center;
   align-items: center;
   gap: 40px;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px 50px;
 }
 
-#content > h1 {
+#content > #home-page > h1 {
   font-family: "Playfair Display";
   font-size: 5rem;
   font-weight: 100px;
 }
 
-#content > p {
+#content > #home-page > p {
   font-size: 1.3rem;
 }
 
-#content > button {
+#content > #home-page > button {
   justify-self: center;
   align-self: start;
   appearance: none;

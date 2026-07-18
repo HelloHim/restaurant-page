@@ -2,6 +2,10 @@ import "./styles.css";
 
 const content = document.getElementById("content");
 
+const homePage = document.createElement("div");
+homePage.id = "home-page";
+content.append(homePage);
+
 const header = document.createElement("h1");
 header.textContent = "Welcome to GlassRoots";
 
@@ -15,4 +19,4 @@ para.textContent = `
 const btn = document.createElement("button");
 btn.textContent = "Menu";
 
-content.append(header, para, btn);
+homePage.append(header, para, btn);
